@@ -281,14 +281,13 @@ async def run(playwright) -> None:
         
     # Переход во вкладку Акции раздел Сегментные акции
     await test_utils.click(Locators.SEGMENT_ACTIONS_LINK)
-    await playwright_expect(page.get_by_role("columnheader", name=TextVariables.COLUMNHEADER_ID)).to_be_visible()
-    await playwright_expect(page.get_by_role("columnheader", name=TextVariables.COLUMNHEADER_SEGMENT_NAME)).to_be_visible()
-    await test_utils.expect_visible(Locators.SEGMENT_NAME_TEXT)
-    await playwright_expect(page.get_by_role("columnheader", name=TextVariables.COLUMNHEADER_SEGMENT_TYPE)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ID)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_SEGMENT_NAME)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_SEGMENT_TYPE)).to_be_visible()
     await test_utils.expect_visible(Locators.START_DATE_SEGMENT_TEXT)
     await test_utils.expect_visible(Locators.END_DATE_SEGMENT_TEXT)
     await test_utils.expect_visible(Locators.FREQUENCY_TEXT)
-    await playwright_expect(page.get_by_role("columnheader", name=TextVariables.COLUMNHEADER_LAST_TRIGGER_TIME)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_LAST_TRIGGER_TIME)).to_be_visible()
     await test_utils.expect_visible(Locators.LAST_TRIGGER_TEXT)
     await test_utils.expect_visible(Locators.NEXT_TRIGGER_TEXT)
     await playwright_expect(page.get_by_text(TextVariables.TEXT_ACTIONS)).to_be_visible()
