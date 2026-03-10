@@ -382,11 +382,10 @@ class Locators:
     }
 
     END_DATE_SEGMENT_TEXT = {LocatorTypes.TEXT: "Дата окончания", "exact": True}
-    END_DATE_SEGMENT= {
-        LocatorTypes.ROLE: RoleTypes.TEXTBOX,
-        LocatorTypes.TEXT: "Дата окончания"          
+    DATE_END_FIELD = {
+        LocatorTypes.LABEL: "Дата окончания",
+        "exact": True
     }
-
     
     FREQUENCY_TEXT = {LocatorTypes.TEXT: "Периодичность"}
     LAST_TRIGGER_TEXT = {LocatorTypes.TEXT: "Последнее срабатывание заняло времени (сек.)"}
@@ -400,12 +399,22 @@ class Locators:
     ACTION_HISTORY_TEXT = {LocatorTypes.TEXT: "История применения акций"}
     REFERRAL_ENABLE_TEXT = {LocatorTypes.TEXT: "Включить реферальную программу?"}
     REFERRER_TEXT = {LocatorTypes.TEXT: "Приглашающий"}
-    BONUS_TYPE_TEXT = {LocatorTypes.TEXT: "Тип вознагражденияБонус"}
+    BONUS_TYPE_TEXT = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-612"]'
+    }
+    REFERRAL_REWARD_TYPE_FIELD = {
+        LocatorTypes.LOCATOR: '//label[normalize-space(.) = "Тип вознаграждения"]/following-sibling::div[contains(@class, "v-select__selections")]/input'
+    }
     ACCRUAL_SUM_TEXT = {LocatorTypes.TEXT: "Сумма начисления"}
     CONDITION_TEXT = {LocatorTypes.TEXT: "Условие полученияПосле регистрации"}
     BOT_BUTTON_TEXT_TEXT = {LocatorTypes.TEXT: "Текст на кнопке бота"}
     REFERRAL_DESCRIPTION_TEXT = {LocatorTypes.TEXT: "Описание реферальной программы"}
     FRIEND_REG_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение о регистрации друга"}
+    REFERRAL_GUEST_GROUP_FIELD = {
+    LocatorTypes.ROLE: RoleTypes.TEXTBOX,
+    "name": "В какую группу создавать приведённых гостей",
+    "exact": True
+}
     REFERRAL_REWARD_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение о получении вознаграждения за друга"}
     REFERRED_GUEST_TEXT = {LocatorTypes.TEXT: "Приведенный гость"}
     GUEST_REG_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение для гостя после регистрации"}
