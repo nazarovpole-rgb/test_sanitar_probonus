@@ -376,7 +376,18 @@ class Locators:
     SEGMENT_NAME_TEXT = {LocatorTypes.TEXT: "Название сегмента"}
     SEGMENT_TYPE_TEXT = {LocatorTypes.TEXT: "Тип сегмента"}
     START_DATE_SEGMENT_TEXT = {LocatorTypes.TEXT: "Дата начала"}
+    START_DATE_SEGMENT = {
+        LocatorTypes.ROLE: RoleTypes.TEXTBOX,
+        LocatorTypes.TEXT: "Дата начала"          
+    }
+
     END_DATE_SEGMENT_TEXT = {LocatorTypes.TEXT: "Дата окончания", "exact": True}
+    END_DATE_SEGMENT= {
+        LocatorTypes.ROLE: RoleTypes.TEXTBOX,
+        LocatorTypes.TEXT: "Дата окончания"          
+    }
+
+    
     FREQUENCY_TEXT = {LocatorTypes.TEXT: "Периодичность"}
     LAST_TRIGGER_TEXT = {LocatorTypes.TEXT: "Последнее срабатывание заняло времени (сек.)"}
     NEXT_TRIGGER_TEXT = {LocatorTypes.TEXT: "Следующее срабатывание"}
@@ -660,6 +671,7 @@ class Locators:
     AGE_RESTRICTIONS_TEXT = {LocatorTypes.TEXT: "Ограничения по возрасту"}
     AGE_CONFIRMATION_TEXT = {LocatorTypes.TEXT: "Подтверждение возраста? - Нет"}
     AGE_REQUEST_TEXT_MODIFICATION_TEXT = {LocatorTypes.TEXT: "Текст запроса возраста можно изменить в настройках фраз"}
+    DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
     WORK_GRADE =  {
     LocatorTypes.LOCATOR: "//div[contains(@class, 'v-select') and .//label[normalize-space()='Оценка']]//input[@test-tag='tag-630']"
 }
