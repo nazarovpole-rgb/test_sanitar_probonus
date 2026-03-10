@@ -406,7 +406,12 @@ class Locators:
         LocatorTypes.LOCATOR: '//label[normalize-space(.) = "Тип вознаграждения"]/following-sibling::div[contains(@class, "v-select__selections")]/input'
     }
     ACCRUAL_SUM_TEXT = {LocatorTypes.TEXT: "Сумма начисления"}
-    CONDITION_TEXT = {LocatorTypes.TEXT: "Условие полученияПосле регистрации"}
+    CONDITION_TEXT613 = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-613"]'
+}
+    CONDITION_TEXT615 = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-615"]'
+}
     BOT_BUTTON_TEXT_TEXT = {LocatorTypes.TEXT: "Текст на кнопке бота"}
     REFERRAL_DESCRIPTION_TEXT = {LocatorTypes.TEXT: "Описание реферальной программы"}
     FRIEND_REG_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение о регистрации друга"}
@@ -681,6 +686,12 @@ class Locators:
     AGE_CONFIRMATION_TEXT = {LocatorTypes.TEXT: "Подтверждение возраста? - Нет"}
     AGE_REQUEST_TEXT_MODIFICATION_TEXT = {LocatorTypes.TEXT: "Текст запроса возраста можно изменить в настройках фраз"}
     DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
+    TEXT_ACCUMULATION828 = {
+    LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-828"]'
+}
+    TEXT_ACCUMULATION829 = {
+    LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-829"]'
+}
     WORK_GRADE =  {
     LocatorTypes.LOCATOR: "//div[contains(@class, 'v-select') and .//label[normalize-space()='Оценка']]//input[@test-tag='tag-630']"
 }
