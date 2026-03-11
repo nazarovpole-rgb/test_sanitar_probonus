@@ -295,7 +295,7 @@ async def run(playwright) -> None:
     
     await test_utils.click(Locators.ADD_SEGMENT_ACTION_BUTTON)
     await playwright_expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT_ACTION).nth(1)).to_be_visible()
-    await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_TAG_NAME)).to_be_visible()
+    await expect(page.locator(TextVariables.TEXT_TAG_NAME846)).to_be_visible(timeout=2000)
     await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_ACTION_TYPE, exact=True)).to_be_visible()
     await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_SEGMENT)).to_be_visible()
     await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_APPLICATION_TYPE)).to_be_visible()
@@ -407,8 +407,8 @@ async def run(playwright) -> None:
     await playwright_expect(page.get_by_text(TextVariables.TEXT_ACTIONS)).to_be_visible()
     
     await test_utils.click(Locators.ADD_SEGMENT_BUTTON)
-    await expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT).first).to_be_visible()
-    await playwright_expect(page.get_by_role("textbox", TextVariables.TEXT_TAG_NAME))
+    await playwright_expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT).nth(1)).to_be_visible()
+    await expect(page.get_by_role(TextVariables.TEXT_TAG_NAME_SEG)).to_be_visible()
     await playwright_expect(page.get_by_role("textbox", TextVariables.TEXT_ACTION_TYPE))
     await test_utils.expect_visible(Locators.SAVE_TEXT)
     await test_utils.expect_visible(Locators.SAVE_AND_CLOSE_TEXT)

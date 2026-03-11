@@ -134,7 +134,7 @@ class TextVariables:
     DIALOG_ADD_SEGMENT_ACTION = "Добавить акцию"
     DIALOG_ADD_PROMOCODE = "Добавить промокод"
     DIALOG_ADD_TRIGGER_ACTION = "Добавить триггерную акцию"
-    DIALOG_ADD_SEGMENT = "(//div[contains(@class, 'v-card__title') and contains(text(), 'Добавить сегмент')])"
+    DIALOG_ADD_SEGMENT = "Добавить сегмент"
     DIALOG_ADD_IDENTIFIER_TYPE = "Добавить тип идентификатора"
     DIALOG_ADD_RESTAURANT = "Добавить ресторан"
     
@@ -363,6 +363,8 @@ class TextVariables:
     TEXT_DISCOUNT_CODE_SPIN = "Код скидки"
     TEXT_TAG_GROUP = "Группа"
     TEXT_TAG_NAME = "Название"
+    TEXT_TAG_NAME846 = 'input[type="text"][test-tag="tag-846"]'
+    TEXT_TAG_NAME_SEG = "//div[contains(@class, 'v-card__title')]/text()[normalize-space()='Добавить сегмент']"
     TEXT_TAG_GROUP_NAME = "Название группы"
     TEXT_PORTIONS_BUY = "Порций купить"
     TEXT_GIFT_PORTIONS = "Подарочных порций"
