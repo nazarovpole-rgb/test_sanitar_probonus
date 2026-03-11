@@ -451,8 +451,8 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.START_DATE_TEXT)
     await test_utils.expect_visible(Locators.END_DATE_TEXT)
     await test_utils.expect_visible(Locators.TYPE_COUP_TEXT610)
-    await playwright_expect(page.locator(TextVariables.TEXT_ACTIONS)).to_be_visible()
-    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ID)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ACTIONS)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ID_CAPS)).to_be_visible()
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_CREATION_DATE)).to_be_visible()
     await test_utils.expect_visible(Locators.MAILING_NAME_TEXT)
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ACTION_TYPE)).to_be_visible()
@@ -463,7 +463,7 @@ async def run(playwright) -> None:
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_SEND_CANCELED)).to_be_visible()
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_SEND_SPEED)).to_be_visible()
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_END_DATETIME)).to_be_visible()
-
+    
     # Переход во вкладку Wallet
     await test_utils.click(Locators.WALLET_BUTTON)
 
@@ -471,9 +471,9 @@ async def run(playwright) -> None:
     await test_utils.click(Locators.WALLET_MAIN_SETTINGS_LINK)
     await playwright_expect(page.get_by_text(TextVariables.TEXT_MAIN, exact=True)).to_be_visible()
     await test_utils.expect_visible(Locators.WALLET_ENABLE_TEXT)
-    await playwright_expect(page.locator(".v-file-input__text")).to_be_visible()
-    await playwright_expect(page.locator(".my-0.py-0.col.col-12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > .v-file-input__text")).to_be_visible()
-    await playwright_expect(page.locator("div:nth-child(5) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > .v-file-input__text")).to_be_visible()
+    await playwright_expect(page.get_by_text(TextVariables.FILE_IMPUT_WALLET, exact=True)).to_be_visible()
+    await playwright_expect(page.get_by_text(TextVariables.FILE_PRIVATE_KEY, exact=True)).to_be_visible()
+    await playwright_expect(page.get_by_text(TextVariables.FILE_SERT_APPLE, exact=True)).to_be_visible()
     await test_utils.expect_visible(Locators.PRIVATE_KEY_PASSWORD_FIELD)
     await test_utils.expect_visible(Locators.PASSTYPE_IDENTIFIER_TEXT)
     await test_utils.expect_visible(Locators.TEAM_IDENTIFIER_TEXT)

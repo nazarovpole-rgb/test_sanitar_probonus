@@ -33,6 +33,8 @@ class TextVariables:
     COLUMNHEADER_NAME = "//th[contains(@class, 'sortable')]//*[text()='Наименование']"
     COLUMNHEADER_TAG_NAME= "//th[contains(@class, 'sortable')]//*[text()='Название']"
     COLUMNHEADER_ACTION = "//th[@role='columnheader' and @aria-label='Действие']"
+    COLUMNHEADER_ACTIONS = "//th[@role='columnheader' and @aria-label='Действия']"
+
     COLUMNHEADER_LOGIN = "//th[contains(@class, 'sortable')]//span[text()='Логин']"
     COLUMNHEADER_ROLE = "//th[contains(@class, 'sortable')]//span[text()='Роль']"
     COLUMNHEADER_USER_TYPE = "//th[contains(@class, 'sortable')]//span[text()='Тип пользователя']"
@@ -468,3 +470,9 @@ class TextVariables:
     TEXT_DISCOUNT_CODE_SPIN = "Код скидки"
     TEXT_FIELD_TITLE = "Заголовок поля"
     TEXT_AMOUNT = "Сумма"
+   
+    # Wallet file
+
+    FILE_IMPUT_WALLET = "xpath=//label[contains(text(), 'Сертификат Wallet загружен на сервер')]"
+    FILE_PRIVATE_KEY = "xpath=//label[contains(text(), ' Приватный ключ сертификата Wallet загружен на сервер')]"
+    FILE_SERT_APPLE = "xpath=//label[contains(text(), 'Сертификат WWDR от Apple загружен на сервер ')]"

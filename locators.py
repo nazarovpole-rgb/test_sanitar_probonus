@@ -83,7 +83,7 @@ class Locators:
     START_DATE_TEXT = {LocatorTypes.TEXT: "Начало"}
     END_DATE_TEXT = {LocatorTypes.TEXT: "Конец", "exact": True}
     TYPE_COUP_TEXT610 = {
-    LocatorTypes.LOCATOR: "xpath=//button[@test-tag='tag-610']"
+    LocatorTypes.LOCATOR: 'xpath=//input[@test-tag="tag-610"]'
 }
     # Навигация тексты
     MANAGEMENT_TEXT = {LocatorTypes.TEXT: "Управление"}
