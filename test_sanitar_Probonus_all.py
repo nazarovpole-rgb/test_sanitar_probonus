@@ -423,7 +423,7 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.ADD_SINGLE_MAILING_TEXT)
     await expect(page.locator(TextVariables.DIALOG_ADD_SEGMENT637)).to_be_visible()
     await test_utils.expect_visible(Locators.NAME_EXACT_TEXT)
-    await playwright_expect(page.get_by_role("textbox", name="Сегмент")).to_be_visible()
+    await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_SEGMENT)).to_be_visible()
     await test_utils.expect_visible(Locators.TRIGGER_DATE_TEXT)
     await test_utils.expect_visible(Locators.TRIGGER_TIME_TEXT)
     await test_utils.expect_visible(Locators.PARAMETERS_TEXT)
