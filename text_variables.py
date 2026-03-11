@@ -134,7 +134,7 @@ class TextVariables:
     DIALOG_ADD_SEGMENT_ACTION = "Добавить акцию"
     DIALOG_ADD_PROMOCODE = "Добавить промокод"
     DIALOG_ADD_TRIGGER_ACTION = "Добавить триггерную акцию"
-    DIALOG_ADD_SEGMENT = "Добавить сегмент"
+    DIALOG_ADD_SEGMENT = "(//div[contains(@class, 'v-card__title') and contains(text(), 'Добавить сегмент')])[1]"
     DIALOG_ADD_IDENTIFIER_TYPE = "Добавить тип идентификатора"
     DIALOG_ADD_RESTAURANT = "Добавить ресторан"
     
