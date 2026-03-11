@@ -407,9 +407,9 @@ async def run(playwright) -> None:
     await playwright_expect(page.get_by_text(TextVariables.TEXT_ACTIONS)).to_be_visible()
     
     await test_utils.click(Locators.ADD_SEGMENT_BUTTON)
-    await playwright_expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT))
-    await playwright_expect(page.get_by_role("textbox", name="Название"))
-    await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_ACTION_TYPE))
+    await expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT).first).to_be_visible()
+    await playwright_expect(page.get_by_role("textbox", TextVariables.TEXT_TAG_NAME))
+    await playwright_expect(page.get_by_role("textbox", TextVariables.TEXT_ACTION_TYPE))
     await test_utils.expect_visible(Locators.SAVE_TEXT)
     await test_utils.expect_visible(Locators.SAVE_AND_CLOSE_TEXT)
     await test_utils.click(Locators.CANCEL_BUTTON)
