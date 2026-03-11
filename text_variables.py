@@ -455,6 +455,7 @@ class TextVariables:
     LOGO_IMAGE_TEXT = "Изображение логотипа"
     LOGO_POSITION_TEXT = "Позиция логотипа"
     USE_TOUCH_SWITCH = "Использовать тач"
+
     EXIT_TEXT = "Выход"
     HELP = "Помощь"
     INFOKIOSK = "Инфокиоск"

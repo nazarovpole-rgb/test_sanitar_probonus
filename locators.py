@@ -82,7 +82,9 @@ class Locators:
     AGE_TEXT = {LocatorTypes.TEXT: "Возраст"}
     START_DATE_TEXT = {LocatorTypes.TEXT: "Начало"}
     END_DATE_TEXT = {LocatorTypes.TEXT: "Конец", "exact": True}
-    
+    TYPE_COUP_TEXT610 = {
+    LocatorTypes.LOCATOR: "xpath=//button[@test-tag='tag-610']"
+}
     # Навигация тексты
     MANAGEMENT_TEXT = {LocatorTypes.TEXT: "Управление"}
     ACTIONS_TEXT = {LocatorTypes.TEXT: "Акции"}
@@ -427,6 +429,9 @@ class Locators:
     PERCENT_TEXT = {LocatorTypes.TEXT: "%"}
     LAST_RECALCULATION_TEXT = {LocatorTypes.TEXT: "Дата/время последнего пересчета"}
     SAVE_TEXT = {LocatorTypes.TEXT: "Сохранить"}
+    TOUCH_SWITCH = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-671"]'
+}
     SAVE_TEXT523 = {
     LocatorTypes.LOCATOR: '[test-tag="tag-523"]'
 }
