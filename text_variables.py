@@ -471,8 +471,3 @@ class TextVariables:
     TEXT_FIELD_TITLE = "Заголовок поля"
     TEXT_AMOUNT = "Сумма"
    
-    # Wallet file
-
-    FILE_IMPUT_WALLET = "xpath=//label[contains(text(), 'Сертификат Wallet загружен на сервер')]"
-    FILE_PRIVATE_KEY = "xpath=//label[contains(text(), ' Приватный ключ сертификата Wallet загружен на сервер')]"
-    FILE_SERT_APPLE = "xpath=//label[contains(text(), 'Сертификат WWDR от Apple загружен на сервер ')]"

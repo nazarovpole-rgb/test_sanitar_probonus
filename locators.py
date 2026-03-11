@@ -82,6 +82,24 @@ class Locators:
     AGE_TEXT = {LocatorTypes.TEXT: "Возраст"}
     START_DATE_TEXT = {LocatorTypes.TEXT: "Начало"}
     END_DATE_TEXT = {LocatorTypes.TEXT: "Конец", "exact": True}
+    
+    # Wallet file
+
+    FILE_INPUT_WALLET = {
+        LocatorTypes.LOCATOR: "xpath=//label[normalize-space()='Сертификат Wallet загружен на сервер']"
+    }
+    FILE_PRIVATE_KEY = {
+        LocatorTypes.LOCATOR: "xpath=//label[contains(text(), 'Приватный ключ сертификата Wallet загружен на сервер')]"
+    }
+    FILE_SERT_APPLE = {
+        LocatorTypes.LOCATOR: "xpath=//label[contains(text(), 'Сертификат WWDR от Apple загружен на сервер')]"
+    }
+
+
+
+
+
+
     TYPE_COUP_TEXT610 = {
     LocatorTypes.LOCATOR: 'xpath=//input[@test-tag="tag-610"]'
 }
