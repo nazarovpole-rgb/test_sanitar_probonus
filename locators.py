@@ -415,10 +415,8 @@ class Locators:
     BOT_BUTTON_TEXT_TEXT = {LocatorTypes.TEXT: "Текст на кнопке бота"}
     REFERRAL_DESCRIPTION_TEXT = {LocatorTypes.TEXT: "Описание реферальной программы"}
     FRIEND_REG_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение о регистрации друга"}
-    REFERRAL_GUEST_GROUP_FIELD = {
-    LocatorTypes.ROLE: RoleTypes.TEXTBOX,
-    "name": "В какую группу создавать приведённых гостей",
-    "exact": True
+    REFERRAL_GROUP_CREATE_FIELD = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-77"]'
 }
     REFERRAL_REWARD_MESSAGE_TEXT = {LocatorTypes.TEXT: "Сообщение о получении вознаграждения за друга"}
     REFERRED_GUEST_TEXT = {LocatorTypes.TEXT: "Приведенный гость"}

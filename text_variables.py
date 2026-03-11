@@ -146,7 +146,6 @@ class TextVariables:
     TEXT_PHONE = "Телефон"
     TEXT_TAGS = "Теги"
     TEXT_ALL = "Все"
-    TEXT_AFTER_REGISTRATION = "После регистрации"
     TEXT_FOREVER = "Бессрочно"
     DATE_LIFE = 'input[type="number"][test-tag="tag-829"]'
     TEXT_YES = "Да"
