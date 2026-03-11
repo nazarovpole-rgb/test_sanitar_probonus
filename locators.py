@@ -213,8 +213,8 @@ class Locators:
     
     # ========== Сегменты -> Список сегментов ==========
     SEGMENTS_LIST_LINK = {LocatorTypes.ROLE: RoleTypes.LINK, "name": "Список сегментов"}
-    ADD_SEGMENT_BUTTON = {LocatorTypes.ROLE: RoleTypes.BUTTON, "name": "Добавить сегмент"}
-    
+    ADD_SEGMENT_BUTTON530 = {LocatorTypes.LOCATOR: "//button[@test-tag='tag-530']"}    
+
     # ========== Рассылки -> Новая рассылка ==========
     NEW_MAILING_LINK = {LocatorTypes.ROLE: RoleTypes.LINK, "name": "Новая рассылка"}
     
@@ -427,7 +427,13 @@ class Locators:
     PERCENT_TEXT = {LocatorTypes.TEXT: "%"}
     LAST_RECALCULATION_TEXT = {LocatorTypes.TEXT: "Дата/время последнего пересчета"}
     SAVE_TEXT = {LocatorTypes.TEXT: "Сохранить"}
+    SAVE_TEXT523 = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-523"]'
+}
     SAVE_AND_CLOSE_TEXT = {LocatorTypes.TEXT: "Сохранить и закрыть"}
+    SAVE_AND_CLOSE_TEXT524 = {
+    LocatorTypes.LOCATOR: '[test-tag="tag-524"]'
+}
     ADD_SINGLE_MAILING_TEXT = {LocatorTypes.TEXT: "Добавить разовую рассылку"}
     NAME_EXACT_TEXT = {LocatorTypes.TEXT: "Название", "exact": True}
     TRIGGER_DATE_TEXT = {LocatorTypes.TEXT: "Дата срабатывания"}

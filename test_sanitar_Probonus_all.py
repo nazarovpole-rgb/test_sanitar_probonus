@@ -406,12 +406,12 @@ async def run(playwright) -> None:
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_LAST_RECALCULATION)).to_be_visible()
     await playwright_expect(page.get_by_text(TextVariables.TEXT_ACTIONS)).to_be_visible()
     
-    await test_utils.click(Locators.ADD_SEGMENT_BUTTON)
-    await playwright_expect(page.get_by_text(TextVariables.DIALOG_ADD_SEGMENT).nth(1)).to_be_visible()
-    await expect(page.get_by_role(TextVariables.TEXT_TAG_NAME_SEG)).to_be_visible()
-    await playwright_expect(page.get_by_role("textbox", TextVariables.TEXT_ACTION_TYPE))
-    await test_utils.expect_visible(Locators.SAVE_TEXT)
-    await test_utils.expect_visible(Locators.SAVE_AND_CLOSE_TEXT)
+    await test_utils.click(Locators.ADD_SEGMENT_BUTTON530)
+    await expect(page.locator(TextVariables.TEXT_TAG_NAME_SEG)).to_be_visible(timeout=1000)
+    await expect(page.locator(TextVariables.DIALOG_ADD_SEGMENT_IN).nth(1)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.TEXT_ACTION_TYPE636)).to_be_visible()
+    await test_utils.expect_visible(Locators.SAVE_TEXT523)
+    await test_utils.expect_visible(Locators.SAVE_AND_CLOSE_TEXT524)
     await test_utils.click(Locators.CANCEL_BUTTON)
 
     # Переход во вкладку Рассылки
@@ -419,7 +419,9 @@ async def run(playwright) -> None:
 
     # Переход во вкладку Рассылки раздела Новая рассылка
     await test_utils.click(Locators.NEW_MAILING_LINK)
+    await page.wait_for_timeout(1000)  
     await test_utils.expect_visible(Locators.ADD_SINGLE_MAILING_TEXT)
+    await expect(page.locator(TextVariables.DIALOG_ADD_SEGMENT637)).to_be_visible()
     await test_utils.expect_visible(Locators.NAME_EXACT_TEXT)
     await playwright_expect(page.get_by_role("textbox", name="Сегмент")).to_be_visible()
     await test_utils.expect_visible(Locators.TRIGGER_DATE_TEXT)
