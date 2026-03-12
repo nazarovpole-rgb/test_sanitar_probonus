@@ -90,6 +90,7 @@ class TextVariables:
     COLUMNHEADER_END_BALANCE = "//th[contains(@class, 'sortable')]//span[text()='Остаток на конец']"
     COLUMNHEADER_PROMOCODE_NAME = "//th[contains(@class, 'sortable')]//span[text()='Название']"
     COLUMNHEADER_TRIGGER_NAME = "//th[contains(@class, 'sortable')]//span[text()='Название']"
+    COLUMNHEADER_CELL_OBJECT_NAME = "xpath=//th[text()='Объект']"
 
     COLUMNHEADER_PROMOCODE_TYPE = "//th[contains(@class, 'sortable')]//span[text()='Тип']"
     COLUMNHEADER_INPUT_PHRASE = "//th[contains(@class, 'sortable')]//span[text()='Фраза для ввода']"

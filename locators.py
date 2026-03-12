@@ -488,7 +488,7 @@ class Locators:
     PASSTYPE_IDENTIFIER_TEXT = {LocatorTypes.TEXT: "passTypeIdentifier от Apple"}
     TEAM_IDENTIFIER_TEXT = {LocatorTypes.TEXT: "teamIdentifier от Apple"}
     GUEST_FORM_TEXT = {LocatorTypes.TEXT: "Анкета"}
-    OBJECT_TEXT = {LocatorTypes.TEXT: "Объект"}
+    OBJECT_TEXT = {LocatorTypes.TEXT: "xpath=//th[text()='Объект']"}
     USE_TEXT = {LocatorTypes.TEXT: "Использовать"}
     REQUIRED_TEXT = {LocatorTypes.TEXT: "Обязательное"}
     ADDITIONAL_TEXT = {LocatorTypes.TEXT: "Доп"}
@@ -713,6 +713,11 @@ class Locators:
     AGE_CONFIRMATION_TEXT = {LocatorTypes.TEXT: "Подтверждение возраста? - Нет"}
     AGE_REQUEST_TEXT_MODIFICATION_TEXT = {LocatorTypes.TEXT: "Текст запроса возраста можно изменить в настройках фраз"}
     DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
+    SAVE_BUTTON159 = {
+    LocatorTypes.ROLE: RoleTypes.BUTTON,
+    "name": "input[type='number'][test-tag='tag-159']",
+    "exact": True
+}
     TEXT_ACCUMULATION828 = {
     LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-828"]'
 }
