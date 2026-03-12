@@ -487,11 +487,11 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.REQUIRED_TEXT)
     await test_utils.expect_visible(Locators.ADDITIONAL_TEXT)
     await test_utils.click(Locators.LOGO_FIELD)
-    await test_utils.expect_visible(Locators.SAVE_BUTTON159)
+    await test_utils.expect_visible(Locators.SAVE_BUTTON_LOGO )
     await test_utils.click(Locators.CANCEL_BUTTON)
 
     await test_utils.click(Locators.BACKGROUND_FIELD)
-    await test_utils.expect_visible(Locators.SAVE_BUTTON159)
+    await test_utils.expect_visible(Locators.SAVE_BUTTON_BACKGROUND )
     await test_utils.click(Locators.CANCEL_BUTTON)
     await test_utils.expect_visible(Locators.ACCEPT_POLICY_TEXT)
     await test_utils.expect_visible(Locators.ACCEPT_PRIVACY_TEXT)

@@ -713,12 +713,12 @@ class Locators:
     AGE_CONFIRMATION_TEXT = {LocatorTypes.TEXT: "Подтверждение возраста? - Нет"}
     AGE_REQUEST_TEXT_MODIFICATION_TEXT = {LocatorTypes.TEXT: "Текст запроса возраста можно изменить в настройках фраз"}
     DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
-    SAVE_BUTTON159 = {
-    LocatorTypes.ROLE: RoleTypes.BUTTON,
-    "name": "Сохранить",
-    "exact": True,
-    "disabled": False  # если хотите отфильтровать неактивные
-}
+    SAVE_BUTTON_LOGO = {
+        LocatorTypes.LOCATOR: 'xpath=//div[contains(@class, "logo-section")]//button[@test-tag="tag-159"]'
+    }
+    SAVE_BUTTON_BACKGROUND = {
+        LocatorTypes.LOCATOR: 'xpath=//div[contains(@class, "background-section")]//button[@test-tag="tag-159"]'
+    }
     TEXT_ACCUMULATION828 = {
     LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-828"]'
 }
