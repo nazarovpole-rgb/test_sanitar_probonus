@@ -715,8 +715,9 @@ class Locators:
     DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
     SAVE_BUTTON159 = {
     LocatorTypes.ROLE: RoleTypes.BUTTON,
-    "name": "input[type='number'][test-tag='tag-159']",
-    "exact": True
+    "name": "Сохранить",
+    "exact": True,
+    "disabled": False  # если хотите отфильтровать неактивные
 }
     TEXT_ACCUMULATION828 = {
     LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-828"]'
