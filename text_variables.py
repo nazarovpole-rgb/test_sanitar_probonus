@@ -472,3 +472,9 @@ class TextVariables:
     TEXT_FIELD_TITLE = "Заголовок поля"
     TEXT_AMOUNT = "Сумма"
    
+    TEMPLATE_NAME = "Название макета"
+    CARD_DESCRIPTION = "Описание карты (ресторана)"
+    CARD_NAME = "Название карты (ресторана)"
+    FIELD_TITLE = "Заголовок поля"
+    CANCEL_BUTTON_TEXT = "Отмена"
+    BACK_SIDE_TEXT_FIELD_NAME = "Текст оборотной стороны"

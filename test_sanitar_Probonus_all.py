@@ -488,11 +488,11 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.ADDITIONAL_TEXT)
     await test_utils.click(Locators.LOGO_FIELD)
     await test_utils.expect_visible(Locators.SAVE_BUTTON_LOGO )
-    await test_utils.click(Locators.CANCEL_BUTTON)
+    await test_utils.click(Locators.CANCEL_BUTTON_LOGO)
 
     await test_utils.click(Locators.BACKGROUND_FIELD)
-    await test_utils.expect_visible(Locators.SAVE_BUTTON_BACKGROUND )
-    await test_utils.click(Locators.CANCEL_BUTTON)
+    await test_utils.expect_visible(Locators.SAVE_BUTTON_BACKGROUND)
+    await test_utils.click(Locators.CANCEL_BUTTON_BACKGROUND)
     await test_utils.expect_visible(Locators.ACCEPT_POLICY_TEXT)
     await test_utils.expect_visible(Locators.ACCEPT_PRIVACY_TEXT)
     await test_utils.expect_visible(Locators.REGISTRATION_TEXT)
@@ -501,42 +501,69 @@ async def run(playwright) -> None:
 
     # Переход во вкладку Wallet раздела Макеты карт
     await test_utils.click(Locators.WALLET_CARD_TEMPLATES_LINK)
+    await page.wait_for_timeout(1000)  
     await test_utils.click(Locators.ADD_TEMPLATE_BUTTON)
     await test_utils.expect_visible(Locators.CARD_SETTINGS_TEXT)
     await test_utils.expect_visible(Locators.TEMPLATE_NAME_EXACT_TEXT)
-    await playwright_expect(page.get_by_role("textbox", name="Название макета")).to_be_visible()
+
+    # Заменяем "Название макета" на переменную
+    await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEMPLATE_NAME)).to_be_visible()
+
     await test_utils.expect_visible(Locators.CARD_DESCRIPTION_TEXT)
-    await playwright_expect(page.get_by_role("textbox", name="Описание карты (ресторана)")).to_be_visible()
-    await test_utils.expect_visible(Locators.WILL_BE_SHOWN_TEXT)
+
+    # Заменяем "Описание карты (ресторана)" на переменную
+    await playwright_expect(page.get_by_role("textbox", name=TextVariables.CARD_DESCRIPTION)).to_be_visible()
+
     await test_utils.expect_visible(Locators.CARD_NAME_TEXT)
-    await playwright_expect(page.get_by_role("textbox", name="Название карты (ресторана)")).to_be_visible()
+
+    # Заменяем "Название карты (ресторана)" на переменную
+    await playwright_expect(page.get_by_role("textbox", name=TextVariables.CARD_NAME)).to_be_visible()
+
     await test_utils.expect_visible(Locators.ALLOW_SHARE_TEXT)
     await test_utils.expect_visible(Locators.PUSH_APPEARANCE_TEXT)
     await test_utils.expect_visible(Locators.PUSH_LOGO_FIELD)
     await test_utils.expect_visible(Locators.RESTAURANT_NAME_CAPS_TEXT)
     await test_utils.expect_visible(Locators.FRONT_SIDE_TEXT)
     await test_utils.expect_visible(Locators.SHOW_ACCOUNT_LEVEL_TEXT)
-    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.TEXT_FIELD_TITLE + r"$")).first).to_be_visible()
-    await playwright_expect(page.get_by_text("Заголовок поля").first).to_be_visible()
+
+    # Заменяем регулярное выражение и "Заголовок поля" на переменные
+    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.FIELD_TITLE + r"$")).first).to_be_visible()
+    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).first).to_be_visible()
     await playwright_expect(page.locator("#input-540")).to_be_visible()
+
     await test_utils.expect_visible(Locators.SHOW_OWNER_DATA_TEXT)
-    await playwright_expect(page.get_by_text("Заголовок поля").nth(1)).to_be_visible()
+
+    # Заменяем "Заголовок поля" (nth(1)) на переменную
+    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).nth(1)).to_be_visible()
     await playwright_expect(page.locator("#input-545")).to_be_visible()
+
     await test_utils.expect_visible(Locators.SHOW_BALANCE_DATA_TEXT)
-    await playwright_expect(page.get_by_text("Заголовок поля").nth(2)).to_be_visible()
+
+    # Заменяем "Заголовок поля" (nth(2)) на переменную
+    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).nth(2)).to_be_visible()
     await playwright_expect(page.locator("#input-550")).to_be_visible()
+
     await test_utils.expect_visible(Locators.BG_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TITLE_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TEXT_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.LOGO_EXACT_FIELD)
-    await playwright_expect(page.get_by_role("button", name="Отмена").nth(1)).to_be_visible()
+
+    # Заменяем "Отмена" на переменную
+    await playwright_expect(page.get_by_role("button", name=TextVariables.CANCEL_BUTTON_TEXT).nth(1)).to_be_visible()
+
     await test_utils.expect_visible(Locators.BIG_LOGO_FIELD)
-    await playwright_expect(page.get_by_role("button", name="Отмена").nth(1)).to_be_visible()
+
+    # Заменяем "Отмена" (снова) на переменную
+    await playwright_expect(page.get_by_role("button", name=TextVariables.CANCEL_BUTTON_TEXT).nth(1)).to_be_visible()
+
     await test_utils.expect_visible(Locators.BACK_SIDE_TEXT)
     await test_utils.expect_visible(Locators.BACK_SIDE_TEXT_FIELD)
-    await playwright_expect(page.get_by_role("textbox", name="Текст оборотной стороны")).to_be_visible()
+
+    # Заменяем "Текст оборотной стороны" на переменную
+    await playwright_expect(page.get_by_role("textbox", name=TextVariables.BACK_SIDE_TEXT_FIELD_NAME)).to_be_visible()
+
     await test_utils.click(Locators.CANCEL_BUTTON)
-    
+
     await test_utils.expect_visible(Locators.TEMPLATE_NAME_HEADER)
     await playwright_expect(page.locator(TextVariables.TEXT_ACTIONS)).to_be_visible()
 

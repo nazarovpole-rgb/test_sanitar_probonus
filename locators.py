@@ -714,10 +714,16 @@ class Locators:
     AGE_REQUEST_TEXT_MODIFICATION_TEXT = {LocatorTypes.TEXT: "Текст запроса возраста можно изменить в настройках фраз"}
     DATE_START_FIELD = {LocatorTypes.LABEL: "Дата начала", "exact": True}
     SAVE_BUTTON_LOGO = {
-        LocatorTypes.LOCATOR: 'xpath=//div[contains(@class, "logo-section")]//button[@test-tag="tag-159"]'
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-159"] >> nth=0'
     }
     SAVE_BUTTON_BACKGROUND = {
-        LocatorTypes.LOCATOR: 'xpath=//div[contains(@class, "background-section")]//button[@test-tag="tag-159"]'
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-159"] >> nth=1'
+    }
+    CANCEL_BUTTON_LOGO = {
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-160"] >> nth=0'
+    }
+    CANCEL_BUTTON_BACKGROUND = {
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-160"] >> nth=1'
     }
     TEXT_ACCUMULATION828 = {
     LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-828"]'
@@ -728,6 +734,116 @@ class Locators:
     WORK_GRADE =  {
     LocatorTypes.LOCATOR: "//div[contains(@class, 'v-select') and .//label[normalize-space()='Оценка']]//input[@test-tag='tag-630']"
 }
+
+#Для WALLET
+
+    WALLET_CARD_TEMPLATES_LINK = {
+        LocatorTypes.LOCATOR: "a[test-tag='wallet-templates-link']"  # замените на реальный селектор
+    }
+    
+    # Кнопки действий
+    ADD_TEMPLATE_BUTTON = {
+        LocatorTypes.LOCATOR: "button[test-tag='add-template']"  # замените на реальный селектор
+    }
+    
+    CANCEL_BUTTON = {
+        LocatorTypes.LOCATOR: "button[test-tag='cancel']"  # или другой селектор
+    }
+    
+    # Текстовые элементы (заголовки, подписи)
+    CARD_SETTINGS_TEXT = {
+        LocatorTypes.LOCATOR: "text='Настройки карты'"  # или XPath/CSS
+    }
+    
+    TEMPLATE_NAME_EXACT_TEXT = {
+        LocatorTypes.LOCATOR: "text='Название макета'"
+    }
+    
+    CARD_DESCRIPTION_TEXT = {
+        LocatorTypes.LOCATOR: "text='Описание карты'"
+    }
+    
+    CARD_NAME_TEXT = {
+        LocatorTypes.LOCATOR: "text='Название карты'"
+    }
+    
+    ALLOW_SHARE_TEXT = {
+        LocatorTypes.LOCATOR: "text='Разрешить делиться'"
+    }
+    
+    PUSH_APPEARANCE_TEXT = {
+        LocatorTypes.LOCATOR: "text='Внешний вид пуша'"
+    }
+    
+    PUSH_LOGO_FIELD = {
+        LocatorTypes.LOCATOR: "div:has-text('Логотип в пуше')"
+    }
+    
+    RESTAURANT_NAME_CAPS_TEXT = {
+        LocatorTypes.LOCATOR: "text='НАЗВАНИЕ РЕСТОРАНА (В КАПСЕ)'"
+    }
+    
+    FRONT_SIDE_TEXT = {
+        LocatorTypes.LOCATOR: "text='Лицевая сторона'"
+    }
+    
+    SHOW_ACCOUNT_LEVEL_TEXT = {
+        LocatorTypes.LOCATOR: "text='Показывать уровень счета'"
+    }
+    
+    SHOW_OWNER_DATA_TEXT = {
+        LocatorTypes.LOCATOR: "text='Показывать данные владельца'"
+    }
+    
+    SHOW_BALANCE_DATA_TEXT = {
+        LocatorTypes.LOCATOR: "text='Показывать данные баланса'"
+    }
+    
+    BG_COLOR_BUTTON = {
+        LocatorTypes.LOCATOR: "button:has-text('Цвет фона')"
+    }
+    
+    TITLE_COLOR_BUTTON = {
+        LocatorTypes.LOCATOR: "button:has-text('Цвет заголовка')"
+    }
+    
+    TEXT_COLOR_BUTTON = {
+        LocatorTypes.LOCATOR: "button:has-text('Цвет текста')"
+    }
+    
+    LOGO_EXACT_FIELD = {
+        LocatorTypes.LOCATOR: "div:has-text('Логотип (точный)')"
+    }
+    
+    BIG_LOGO_FIELD = {
+        LocatorTypes.LOCATOR: "div:has-text('Большой логотип')"
+    }
+    
+    BACK_SIDE_TEXT = {
+        LocatorTypes.LOCATOR: "text='Оборотная сторона'"
+    }
+    
+    BACK_SIDE_TEXT_FIELD = {
+        LocatorTypes.LOCATOR: "div:has-text('Текст оборотной стороны')"
+    }
+    
+    TEMPLATE_NAME_HEADER = {
+        LocatorTypes.LOCATOR: "h2:has-text('Название макета')"
+    }
+    
+    # Для элементов, которые ищутся по ID
+    INPUT_540 = {
+        LocatorTypes.LOCATOR: "#input-540"
+    }
+    
+    INPUT_545 = {
+        LocatorTypes.LOCATOR: "#input-545"
+    }
+    
+    INPUT_550 = {
+        LocatorTypes.LOCATOR: "#input-550"
+    }
+
 
 
 class LocatorTemplates:
