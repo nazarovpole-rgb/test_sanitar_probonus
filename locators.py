@@ -737,22 +737,8 @@ class Locators:
 
 #Для WALLET
 
-    WALLET_CARD_TEMPLATES_LINK = {
-        LocatorTypes.LOCATOR: "a[test-tag='wallet-templates-link']"  # замените на реальный селектор
-    }
-    
-    # Кнопки действий
-    ADD_TEMPLATE_BUTTON = {
-        LocatorTypes.LOCATOR: "button[test-tag='add-template']"  # замените на реальный селектор
-    }
-    
-    CANCEL_BUTTON = {
-        LocatorTypes.LOCATOR: "button[test-tag='cancel']"  # или другой селектор
-    }
-    
-    # Текстовые элементы (заголовки, подписи)
     CARD_SETTINGS_TEXT = {
-        LocatorTypes.LOCATOR: "text='Настройки карты'"  # или XPath/CSS
+        LocatorTypes.LOCATOR: "text='Общие настройки карты'"
     }
     
     TEMPLATE_NAME_EXACT_TEXT = {
@@ -760,8 +746,8 @@ class Locators:
     }
     
     CARD_DESCRIPTION_TEXT = {
-        LocatorTypes.LOCATOR: "text='Описание карты'"
-    }
+    LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-915"]'
+}
     
     CARD_NAME_TEXT = {
         LocatorTypes.LOCATOR: "text='Название карты'"
@@ -773,10 +759,6 @@ class Locators:
     
     PUSH_APPEARANCE_TEXT = {
         LocatorTypes.LOCATOR: "text='Внешний вид пуша'"
-    }
-    
-    PUSH_LOGO_FIELD = {
-        LocatorTypes.LOCATOR: "div:has-text('Логотип в пуше')"
     }
     
     RESTAURANT_NAME_CAPS_TEXT = {
@@ -799,39 +781,19 @@ class Locators:
         LocatorTypes.LOCATOR: "text='Показывать данные баланса'"
     }
     
-    BG_COLOR_BUTTON = {
-        LocatorTypes.LOCATOR: "button:has-text('Цвет фона')"
-    }
-    
-    TITLE_COLOR_BUTTON = {
-        LocatorTypes.LOCATOR: "button:has-text('Цвет заголовка')"
-    }
-    
-    TEXT_COLOR_BUTTON = {
-        LocatorTypes.LOCATOR: "button:has-text('Цвет текста')"
-    }
-    
-    LOGO_EXACT_FIELD = {
-        LocatorTypes.LOCATOR: "div:has-text('Логотип (точный)')"
-    }
-    
-    BIG_LOGO_FIELD = {
-        LocatorTypes.LOCATOR: "div:has-text('Большой логотип')"
-    }
-    
     BACK_SIDE_TEXT = {
         LocatorTypes.LOCATOR: "text='Оборотная сторона'"
     }
     
     BACK_SIDE_TEXT_FIELD = {
-        LocatorTypes.LOCATOR: "div:has-text('Текст оборотной стороны')"
+        LocatorTypes.LOCATOR: "text='Текст оборотной стороны'"
     }
     
     TEMPLATE_NAME_HEADER = {
         LocatorTypes.LOCATOR: "h2:has-text('Название макета')"
     }
     
-    # Для элементов, которые ищутся по ID
+    # Поля ввода по ID (они уже были, но добавим для полноты)
     INPUT_540 = {
         LocatorTypes.LOCATOR: "#input-540"
     }
