@@ -34,6 +34,7 @@ class TextVariables:
     COLUMNHEADER_TAG_NAME= "//th[contains(@class, 'sortable')]//*[text()='Название']"
     COLUMNHEADER_ACTION = "//th[@role='columnheader' and @aria-label='Действие']"
     COLUMNHEADER_ACTIONS = "//th[@role='columnheader' and @aria-label='Действия']"
+    COLUMNHEADER_GENDER = "//th[@role='columnheader' and @aria-label='Пол']"
 
     COLUMNHEADER_LOGIN = "//th[contains(@class, 'sortable')]//span[text()='Логин']"
     COLUMNHEADER_ROLE = "//th[contains(@class, 'sortable')]//span[text()='Роль']"
@@ -129,8 +130,6 @@ class TextVariables:
     DIALOG_ADD_USER = "Добавить пользователя"
     DIALOG_ADD_API_USER = "Добавить пользователя API"
     DIALOG_ADD_ROLE ="//span[@class='headline' and normalize-space()='Добавить роль']"
-
-
     DIALOG_ADD_PRODUCT_COUPON = "Добавление товарного купона"
     DIALOG_ADD_TAG = "Добавить тег"
     DIALOG_ADD_TAG_GROUP = "Добавить группу тегов"
@@ -479,3 +478,9 @@ class TextVariables:
     FIELD_TITLE = "Заголовок поля"
     CANCEL_BUTTON_TEXT = "Отмена"
     BACK_SIDE_TEXT_FIELD_NAME = "Текст оборотной стороны"
+
+
+    # Антифрод
+
+    CONTROL_TEXT= "Контролировать количество применений в неделю"
+    USE_SMT_TEXT= "Использовать собственный SMTP-сервер"
