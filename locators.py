@@ -512,7 +512,9 @@ class Locators:
     SHOW_ACCOUNT_LEVEL_TEXT = {LocatorTypes.TEXT: "Показывать уровень счета"}
     FIELD_TITLE_TEXT = {LocatorTypes.TEXT: "Заголовок поля"}
     SHOW_OWNER_DATA_TEXT = {LocatorTypes.TEXT: "Показывать данные владельца"}
-    SHOW_BALANCE_DATA_TEXT = {LocatorTypes.TEXT: "Показывать данные о балансе"}
+    SHOW_BALANCE_DATA_TEXT = {
+    LocatorTypes.LOCATOR: "//input[@type='checkbox' and @test-tag='tag-697']"
+}    
     BG_COLOR_BUTTON = {LocatorTypes.ROLE: RoleTypes.BUTTON, "name": "Цвет фона"}
     TITLE_COLOR_BUTTON = {LocatorTypes.ROLE: RoleTypes.BUTTON, "name": "Цвет заголовков"}
     TEXT_COLOR_BUTTON = {LocatorTypes.ROLE: RoleTypes.BUTTON, "name": "Цвет текста"}
@@ -539,10 +541,14 @@ class Locators:
     CONTROL_DAILY_TEXT = {LocatorTypes.TEXT: "Контролировать количество применений в день"}
     CONTROL_WEEKLY_TEXT = {LocatorTypes.TEXT: "Контролировать количество применений в неделю"}
     CONTROL_MONTHLY_TEXT = {LocatorTypes.TEXT: "Контролировать количество применений в месяц"}
-    EMAIL_NOTIFICATIONS_ENABLE_TEXT = {LocatorTypes.TEXT: "Получать уведомления на Email"}
+    EMAIL_NOTIFICATIONS_ENABLE_TEXT = {
+    LocatorTypes.LOCATOR: "//label[text()='Получать уведомления на Email']"
+}
     EMAIL_ADDRESSES_TEXT = {LocatorTypes.TEXT: "Адреса эл. почт для оповещений"}
     CUSTOM_SMTP_TEXT = {LocatorTypes.TEXT: "Использовать собственный SMTP-сервер"}
-    TELEGRAM_NOTIFICATIONS_ENABLE_TEXT = {LocatorTypes.TEXT: "Получать уведомления в"}
+    TELEGRAM_NOTIFICATIONS_ENABLE_TEXT = {LocatorTypes.TEXT: "Получать уведомления в Telegram"}
+    
+
     BOT_REG_LINK_TEXT = {LocatorTypes.TEXT: "Ссылка для регистрации в боте"}
     BOT_RECIPIENTS_TEXT = {LocatorTypes.TEXT: "Получатели, зарегистрированные в боте"}
     FULL_NAME_TEXT = {LocatorTypes.TEXT: "ФИО"}
@@ -776,11 +782,6 @@ class Locators:
     SHOW_OWNER_DATA_TEXT = {
         LocatorTypes.LOCATOR: "text='Показывать данные владельца'"
     }
-    
-    SHOW_BALANCE_DATA_TEXT = {
-        LocatorTypes.LOCATOR: "text='Показывать данные баланса'"
-    }
-    
     BACK_SIDE_TEXT = {
         LocatorTypes.LOCATOR: "text='Оборотная сторона'"
     }
@@ -796,16 +797,24 @@ class Locators:
     FIELD_TITLE_TEXT917 = {
     LocatorTypes.LOCATOR: 'input[test-tag="tag-917"]'
     }
-    FIELD_TITLE_TEXT917 = {
+    FIELD_TITLE_TEXT918 = {
     LocatorTypes.LOCATOR: 'input[test-tag="tag-918"]'
     }
-    FIELD_TITLE_TEXT917 = {
+    FIELD_TITLE_TEXT919 = {
     LocatorTypes.LOCATOR: 'input[test-tag="tag-919"]'
     }
-
-
-
-
+    LOGO_EXACT_FIELD920 = {
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-920"]'
+    }
+    BIG_LOGO_FIELD921= {
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-921"]'
+    }
+    LICENSE_CLOSE_BUTTON163= {
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-163"]'
+    }
+    DIALOG_ADD_LOCATION = {
+    LocatorTypes.LOCATOR: "//div[contains(@class, 'v-card__title') and contains(text(), 'Добавить локацию')]"
+}
 
 
 class LocatorTemplates:

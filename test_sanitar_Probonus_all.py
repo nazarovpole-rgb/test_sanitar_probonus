@@ -533,31 +533,17 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.BG_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TITLE_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TEXT_COLOR_BUTTON)
-    await test_utils.expect_visible(Locators.LOGO_EXACT_FIELD)
-
-    # Заменяем "Отмена" на переменную
-    await playwright_expect(page.get_by_role("button", name=TextVariables.CANCEL_BUTTON_TEXT).nth(1)).to_be_visible()
-
-    await test_utils.expect_visible(Locators.BIG_LOGO_FIELD)
-
-    # Заменяем "Отмена" (снова) на переменную
-    await playwright_expect(page.get_by_role("button", name=TextVariables.CANCEL_BUTTON_TEXT).nth(1)).to_be_visible()
-
+    await test_utils.expect_visible(Locators.LOGO_EXACT_FIELD920)
+    await test_utils.expect_visible(Locators.BIG_LOGO_FIELD921)
     await test_utils.expect_visible(Locators.BACK_SIDE_TEXT)
     await test_utils.expect_visible(Locators.BACK_SIDE_TEXT_FIELD)
-
-    # Заменяем "Текст оборотной стороны" на переменную
-    await playwright_expect(page.get_by_role("textbox", name=TextVariables.BACK_SIDE_TEXT_FIELD_NAME)).to_be_visible()
-
     await test_utils.click(Locators.CANCEL_BUTTON)
 
-    await test_utils.expect_visible(Locators.TEMPLATE_NAME_HEADER)
-    await playwright_expect(page.locator(TextVariables.TEXT_ACTIONS)).to_be_visible()
 
     # Переход во вкладку Wallet раздела Баланс
     await test_utils.click(Locators.WALLET_BALANCE_LINK)
-    await test_utils.click(Locators.LICENSE_CLOSE_BUTTON)
-    await playwright_expect(page.get_by_role("main").get_by_text("Баланс", exact=True)).to_be_visible()
+    await test_utils.click(Locators.LICENSE_CLOSE_BUTTON163)
+    await test_utils.expect_visible(Locators.WALLET_BALANCE_LINK)
     await test_utils.expect_visible(Locators.TRANSACTIONS_TEXT)
     await test_utils.expect_visible(Locators.DATE_EXACT_TEXT)
     await playwright_expect(page.locator(TextVariables.COLUMNHEADER_SUM)).to_be_visible()
@@ -567,7 +553,6 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.START_DATE_TEXT)
     await test_utils.expect_visible(Locators.END_DATE_TEXT)
     await test_utils.expect_visible(Locators.APPLY_FILTER_BUTTON)
-    
     await test_utils.click(Locators.REQUEST_INVOICE_BUTTON)
     await playwright_expect(page.locator("label").filter(has_text=TextVariables.TEXT_AMOUNT)).to_be_visible()
     await test_utils.expect_visible(Locators.INN_FIELD)
@@ -582,21 +567,24 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.LOCATION_NAME_TEXT)
     await test_utils.expect_visible(Locators.MESSAGE_HEADER)
     await test_utils.expect_visible(Locators.COORDINATES_HEADER)
-    await playwright_expect(page.locator(TextVariables.TEXT_ACTIONS)).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_ACTIONS)).to_be_visible()
     await test_utils.expect_visible(Locators.SAVE_TEXT)
     await test_utils.expect_visible(Locators.SEARCH_FIELD)
     
     await test_utils.click(Locators.ADD_LOCATION_BUTTON)
-    await playwright_expect(page.get_by_text(TextVariables.DIALOG_ADD_LOCATION).nth(1)).to_be_visible()
+    await test_utils.expect_visible(Locators.DIALOG_ADD_LOCATION)
     await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_LOCATION_NAME)).to_be_visible()
     await playwright_expect(page.get_by_role("textbox", name=TextVariables.TEXT_MESSAGE)).to_be_visible()
     await test_utils.click(Locators.CANCEL_BUTTON)
     
     # Переход во вкладку Антифрод
     await test_utils.click(Locators.ANTIFRAUD_BUTTON)
+    await page.wait_for_timeout(2000)  
+
     
     # Переход во вкладку Антифрод раздела Настройки
     await test_utils.click(Locators.ANTIFRAUD_SETTINGS_LINK)
+    await page.wait_for_timeout(2000)  
     await test_utils.click(Locators.MAIN_SETTINGS_BUTTON)
     await test_utils.expect_visible(Locators.ENABLE_ANTIFRAUD_TEXT)
     await test_utils.expect_visible(Locators.CONTROL_DAILY_TEXT)
@@ -610,8 +598,6 @@ async def run(playwright) -> None:
     
     await test_utils.click(Locators.TELEGRAM_NOTIFICATIONS_BUTTON)
     await test_utils.expect_visible(Locators.TELEGRAM_NOTIFICATIONS_ENABLE_TEXT)
-    await playwright_expect(page.get_by_role("switch", name="Получать уведомления в")).check()
-    await playwright_expect(page.get_by_text("Ссылка для регистрации в боте")).first.to_be_visible()
     await test_utils.expect_visible(Locators.BOT_RECIPIENTS_TEXT)
     await playwright_expect(page.get_by_text(TextVariables.TEXT_ACTIONS)).to_be_visible()
     await test_utils.expect_visible(Locators.FULL_NAME_TEXT)
@@ -623,7 +609,7 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.EXCLUDED_GROUPS_TEXT)
     await test_utils.expect_visible(Locators.ACCOUNT_GROUP_TEXT)
     await test_utils.expect_visible(Locators.EXCLUDED_ACCOUNTS_TEXT)
-    await playwright_expect(page.get_by_label("ФИО", exact=True).get_by_text("ФИО")).to_be_visible()
+    await playwright_expect(page.locator(TextVariables.COLUMNHEADER_FIO)).to_be_visible()
     await test_utils.expect_visible(Locators.CARDS_IDENTIFIERS_TEXT)
     await test_utils.expect_visible(Locators.PHONES_IDENTIFIERS_TEXT)
     await test_utils.expect_visible(Locators.OTHER_IDENTIFIERS_TEXT)

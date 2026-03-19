@@ -130,6 +130,7 @@ class TextVariables:
     DIALOG_ADD_API_USER = "Добавить пользователя API"
     DIALOG_ADD_ROLE ="//span[@class='headline' and normalize-space()='Добавить роль']"
 
+
     DIALOG_ADD_PRODUCT_COUPON = "Добавление товарного купона"
     DIALOG_ADD_TAG = "Добавить тег"
     DIALOG_ADD_TAG_GROUP = "Добавить группу тегов"
