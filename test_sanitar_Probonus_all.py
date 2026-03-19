@@ -639,10 +639,10 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.SCREEN_MESSAGE_HEADER)
     await test_utils.expect_visible(Locators.PRINT_MESSAGE_HEADER)
     await test_utils.expect_visible(Locators.WALLET_HEADER)
-    await playwright_expect(page.locator(".v-file-input__text")).to_be_visible()
-    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.TEXT_SEPARATOR + r"$"))).to_be_visible()
-    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.TEXT_RECOGNIZE_FILE + r"$"))).to_be_visible()
-    await playwright_expect(page.get_by_role("textbox", name="Группа счетов")).to_be_visible()
+    await test_utils.expect_visible(Locators.IMPORT_FORMAT_LINK)
+    await test_utils.expect_visible(Locators.SEPARATOR_TEXT)
+    await test_utils.expect_visible(Locators.TEXT_RECOGNIZE_FILE387)
+    await test_utils.expect_visible(Locators.ACCOUNT_GROUP_TEXT)
     await test_utils.expect_visible(Locators.IMPORT_BUTTON)
 
     # Переход во вкладку Импорт раздела Импорт Потрат

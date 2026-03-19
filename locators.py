@@ -567,18 +567,35 @@ class Locators:
     LAST_NAME_HEADER = {LocatorTypes.TEXT: "Фамилия"}
     PATRONYMIC_HEADER = {LocatorTypes.TEXT: "Отчество"}
     GENDER_HEADER = {LocatorTypes.TEXT: "Пол"}
-    BALANCE_HEADER = {LocatorTypes.TEXT: "Баланс"}
+    BALANCE_HEADER = {
+    LocatorTypes.LOCATOR: "//th[@class='text-center' and text()='Баланс']"
+}    
     DISCOUNT_CODE_HEADER = {LocatorTypes.TEXT: "Код скидки"}
     BONUS_TYPE_CODE_HEADER = {LocatorTypes.TEXT: "Код типа бонусов"}
     PHONE1_HEADER = {LocatorTypes.TEXT: "Телефон1"}
     PHONE2_HEADER = {LocatorTypes.TEXT: "Телефон2"}
     EMAIL_HEADER = {LocatorTypes.TEXT: "Почта"}
     BIRTHDAY_HEADER = {LocatorTypes.TEXT: "День рождения"}
-    INFO_HEADER = {LocatorTypes.TEXT: "Информация"}
+    INFO_HEADER = {
+    LocatorTypes.LOCATOR: "//th[@class='text-center' and text()='Информация']"
+}    
     SCREEN_MESSAGE_HEADER = {LocatorTypes.TEXT: "Сообщение для экрана"}
     PRINT_MESSAGE_HEADER = {LocatorTypes.TEXT: "Сообщение для печати"}
-    WALLET_HEADER = {LocatorTypes.TEXT: "Wallet"}
-    SEPARATOR_TEXT = {LocatorTypes.TEXT: "Разделитель; точка с запятой"}
+    WALLET_HEADER = {
+    LocatorTypes.LOCATOR: "//th[@class='text-center' and text()='Wallet']"
+}
+    SEPARATOR_TEXT = {
+    LocatorTypes.LOCATOR: "//div[contains(@class, 'v-select__selection') and contains(text(), 'точка с запятой')]"
+}
+    IMPORT_FORMAT_LINK = {
+    LocatorTypes.LOCATOR: "//a[text()='Формат файла импорта']"
+}
+    TEXT_RECOGNIZE_FILE = {
+    LocatorTypes.LOCATOR: "//a[text()='Попытаться распознать файл']"
+}
+    TEXT_RECOGNIZE_FILE387 = {
+        LocatorTypes.LOCATOR: 'button[test-tag="tag-387"]'
+    }
     RECOGNIZE_FILE_TEXT = {LocatorTypes.TEXT: "Попытаться распознать файл"}
     IDENTIFIER_HEADER = {LocatorTypes.TEXT: "Идентификатор"}
     SPEND_AMOUNT_HEADER = {LocatorTypes.TEXT: "Сумма потрат (коп.)"}

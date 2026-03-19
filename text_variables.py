@@ -34,7 +34,7 @@ class TextVariables:
     COLUMNHEADER_TAG_NAME= "//th[contains(@class, 'sortable')]//*[text()='Название']"
     COLUMNHEADER_ACTION = "//th[@role='columnheader' and @aria-label='Действие']"
     COLUMNHEADER_ACTIONS = "//th[@role='columnheader' and @aria-label='Действия']"
-    COLUMNHEADER_GENDER = "//th[@role='columnheader' and @aria-label='Пол']"
+    COLUMNHEADER_GENDER = "//th[@class='text-center' and text()='Пол']"
 
     COLUMNHEADER_LOGIN = "//th[contains(@class, 'sortable')]//span[text()='Логин']"
     COLUMNHEADER_ROLE = "//th[contains(@class, 'sortable')]//span[text()='Роль']"
@@ -423,8 +423,6 @@ class TextVariables:
     TEXT_AGE_REQUEST_TEXT_MODIFICATION = "Текст запроса возраста можно изменить в настройках фраз"
     
     # Разделители и другие тексты
-    TEXT_SEPARATOR = "Разделитель; точка с запятой"
-    TEXT_RECOGNIZE_FILE = "Попытаться распознать файл"
     TEXT_EXPORT_TO_FILE = "Сохранить в файл"
 
     # Добавить счет вкладки
