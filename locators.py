@@ -746,11 +746,11 @@ class Locators:
     }
     
     CARD_DESCRIPTION_TEXT = {
-    LocatorTypes.LOCATOR: 'input[type="number"][test-tag="tag-915"]'
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-915"]'
 }
     
     CARD_NAME_TEXT = {
-        LocatorTypes.LOCATOR: "text='Название карты'"
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-914"]'
     }
     
     ALLOW_SHARE_TEXT = {
@@ -758,11 +758,11 @@ class Locators:
     }
     
     PUSH_APPEARANCE_TEXT = {
-        LocatorTypes.LOCATOR: "text='Внешний вид пуша'"
+        LocatorTypes.LOCATOR: "text='Настройка внешнего вида PUSH уведомлений'"
     }
     
     RESTAURANT_NAME_CAPS_TEXT = {
-        LocatorTypes.LOCATOR: "text='НАЗВАНИЕ РЕСТОРАНА (В КАПСЕ)'"
+        LocatorTypes.LOCATOR: "text='НАЗВАНИЕ РЕСТОРАНА'"
     }
     
     FRONT_SIDE_TEXT = {
@@ -793,18 +793,18 @@ class Locators:
         LocatorTypes.LOCATOR: "h2:has-text('Название макета')"
     }
     
-    # Поля ввода по ID (они уже были, но добавим для полноты)
-    INPUT_540 = {
-        LocatorTypes.LOCATOR: "#input-540"
+    FIELD_TITLE_TEXT917 = {
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-917"]'
     }
-    
-    INPUT_545 = {
-        LocatorTypes.LOCATOR: "#input-545"
+    FIELD_TITLE_TEXT917 = {
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-918"]'
     }
-    
-    INPUT_550 = {
-        LocatorTypes.LOCATOR: "#input-550"
+    FIELD_TITLE_TEXT917 = {
+    LocatorTypes.LOCATOR: 'input[test-tag="tag-919"]'
     }
+
+
+
 
 
 

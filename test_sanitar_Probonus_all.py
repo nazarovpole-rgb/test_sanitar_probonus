@@ -525,24 +525,11 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.RESTAURANT_NAME_CAPS_TEXT)
     await test_utils.expect_visible(Locators.FRONT_SIDE_TEXT)
     await test_utils.expect_visible(Locators.SHOW_ACCOUNT_LEVEL_TEXT)
-
-    # Заменяем регулярное выражение и "Заголовок поля" на переменные
-    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.FIELD_TITLE + r"$")).first).to_be_visible()
-    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).first).to_be_visible()
-    await playwright_expect(page.locator("#input-540")).to_be_visible()
-
+    await test_utils.expect_visible(Locators.FIELD_TITLE_TEXT917)
     await test_utils.expect_visible(Locators.SHOW_OWNER_DATA_TEXT)
-
-    # Заменяем "Заголовок поля" (nth(1)) на переменную
-    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).nth(1)).to_be_visible()
-    await playwright_expect(page.locator("#input-545")).to_be_visible()
-
+    await test_utils.expect_visible(Locators.FIELD_TITLE_TEXT918)
     await test_utils.expect_visible(Locators.SHOW_BALANCE_DATA_TEXT)
-
-    # Заменяем "Заголовок поля" (nth(2)) на переменную
-    await playwright_expect(page.get_by_text(TextVariables.FIELD_TITLE).nth(2)).to_be_visible()
-    await playwright_expect(page.locator("#input-550")).to_be_visible()
-
+    await test_utils.expect_visible(Locators.FIELD_TITLE_TEXT919)
     await test_utils.expect_visible(Locators.BG_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TITLE_COLOR_BUTTON)
     await test_utils.expect_visible(Locators.TEXT_COLOR_BUTTON)
