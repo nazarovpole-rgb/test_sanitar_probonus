@@ -64,7 +64,7 @@ class Locators:
     # ========== Тексты ==========
     # Дашборд тексты
     DASHBOARD_TEXT = {LocatorTypes.TEXT: "Дашборд"}
-    SUMMARY_METRICS_TEXT = {LocatorTypes.TEXT: "Суммарные показатели"}
+    SUMMARY_METRICS_TEXT = {LocatorTypes.TEXT: "Суммарные показатели по базе"}
     DYNAMICS_METRICS_TEXT = {LocatorTypes.TEXT: "Динамика показателей"}
     GUEST_BASE_CHARACTERISTICS_TEXT = {LocatorTypes.TEXT: "Характеристики гостевой базы"}
     CHECKS_COUNT_TEXT = {LocatorTypes.TEXT: "Количество чеков", "exact": True}
