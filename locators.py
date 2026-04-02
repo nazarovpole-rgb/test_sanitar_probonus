@@ -833,6 +833,23 @@ class Locators:
     LocatorTypes.LOCATOR: "//div[contains(@class, 'v-card__title') and contains(text(), 'Добавить локацию')]"
 }
 
+#Для импорта
+
+    IMPORT_BUTTON388 = {
+    LocatorTypes.LOCATOR: "//button[@test-tag='tag-388']"
+}    
+    IMPORT_BUTTON390 = {
+    LocatorTypes.LOCATOR: "//button[@test-tag='tag-390']"
+}    
+    TEXT_SEPARATOR = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-609']"
+}    
+
+    FILE_INPUT_CSV = {
+    LocatorTypes.LOCATOR: "//div[@class='v-text-field__slot' or contains(concat(' ', @class, ' '), ' v-text-field__slot ')]"
+}
+
+
 
 class LocatorTemplates:
     """Шаблоны для создания сложных локаторов"""

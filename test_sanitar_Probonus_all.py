@@ -643,14 +643,7 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.SEPARATOR_TEXT)
     await test_utils.expect_visible(Locators.TEXT_RECOGNIZE_FILE387)
     await test_utils.expect_visible(Locators.ACCOUNT_GROUP_TEXT)
-    await test_utils.expect_visible(Locators.IMPORT_BUTTON)
-
-
-
-    # Я БЫЛ ТУТА, ПОТОМ БУДУ ТАМА
-
-
-
+    await test_utils.expect_visible(Locators.IMPORT_BUTTON388)
 
     # Переход во вкладку Импорт раздела Импорт Потрат
     await test_utils.click(Locators.IMPORT_SPENDS_LINK)
@@ -658,9 +651,9 @@ async def run(playwright) -> None:
     await test_utils.expect_visible(Locators.ROW_HEADER)
     await test_utils.expect_visible(Locators.IDENTIFIER_HEADER)
     await test_utils.expect_visible(Locators.SPEND_AMOUNT_HEADER)
-    await playwright_expect(page.locator(".v-file-input__text")).to_be_visible()
-    await playwright_expect(page.locator("div").filter(has_text=re.compile(r"^" + TextVariables.TEXT_SEPARATOR + r"$"))).to_be_visible()
-    await test_utils.expect_visible(Locators.IMPORT_BUTTON)
+    await test_utils.expect_visible(Locators.FILE_INPUT_CSV)
+    await test_utils.expect_visible(Locators.TEXT_SEPARATOR)
+    await test_utils.expect_visible(Locators.IMPORT_BUTTON390)
 
     # Переход во вкладку Отчеты
     await test_utils.click(Locators.REPORTS_BUTTON)
