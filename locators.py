@@ -849,6 +849,27 @@ class Locators:
     LocatorTypes.LOCATOR: "//div[@class='v-text-field__slot' or contains(concat(' ', @class, ' '), ' v-text-field__slot ')]"
 }
 
+#Для Отчетов
+    REST = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-11']"
+}    
+    ADDITIONAL_FIELD={
+    LocatorTypes.LOCATOR: "input[test-tag='tag-626']"
+}    
+
+    START_DATE_TEXT27 = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-27']"
+}    
+    ACCOUNT_GROUP_TEXT77 = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-77']"
+    }
+
+
+
+
+
+
+
 
 
 class LocatorTemplates:

@@ -35,6 +35,7 @@ class TextVariables:
     COLUMNHEADER_ACTION = "//th[@role='columnheader' and @aria-label='Действие']"
     COLUMNHEADER_ACTIONS = "//th[@role='columnheader' and @aria-label='Действия']"
     COLUMNHEADER_GENDER = "//th[@class='text-center' and text()='Пол']"
+    COLUMNHEADER_TAGS = "//th[contains(@class, 'sortable')]//span[text()='Теги']"
 
     COLUMNHEADER_LOGIN = "//th[contains(@class, 'sortable')]//span[text()='Логин']"
     COLUMNHEADER_ROLE = "//th[contains(@class, 'sortable')]//span[text()='Роль']"
