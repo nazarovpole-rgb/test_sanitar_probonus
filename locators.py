@@ -605,7 +605,6 @@ class Locators:
     COUNT_TEXT = {LocatorTypes.TEXT: "Кол-во"}
     ORGANIZATION_DEDUCTION_HEADER = {LocatorTypes.TEXT: "Вычет организация"}
     EMPLOYEE_DEDUCTION_HEADER = {LocatorTypes.TEXT: "Вычет сотрудник"}
-    TOTAL_REPORT_TEXT = {LocatorTypes.TEXT: "Отчёт \"Суммовой\""}
     ALL_TAGS_TEXT = {LocatorTypes.TEXT: "Теги: все (15)"}
     ACCOUNT_GROUP_HEADER = {LocatorTypes.TEXT: "Группа счетов"}
     TAGS_TABLE_TEXT = {LocatorTypes.TEXT: "Теги"}
@@ -768,6 +767,7 @@ class Locators:
         LocatorTypes.LOCATOR: "text='Название макета'"
     }
     
+    
     CARD_DESCRIPTION_TEXT = {
     LocatorTypes.LOCATOR: 'input[test-tag="tag-915"]'
 }
@@ -787,7 +787,8 @@ class Locators:
     RESTAURANT_NAME_CAPS_TEXT = {
         LocatorTypes.LOCATOR: "text='НАЗВАНИЕ РЕСТОРАНА'"
     }
-    
+    TOTAL_REPORT_TEXT = {LocatorTypes.TEXT: "//div[@test-tag='tag-1461']"}
+
     FRONT_SIDE_TEXT = {
         LocatorTypes.LOCATOR: "text='Лицевая сторона'"
     }
@@ -853,8 +854,17 @@ class Locators:
     REST = {
     LocatorTypes.LOCATOR: "input[test-tag='tag-11']"
 }    
-    ADDITIONAL_FIELD={
+    ADDITIONAL_FIELD626={
     LocatorTypes.LOCATOR: "input[test-tag='tag-626']"
+}    
+    ADDITIONAL_FIELD627={
+    LocatorTypes.LOCATOR: "input[test-tag='tag-627']"
+}    
+    ADDITIONAL_FIELD629={
+    LocatorTypes.LOCATOR: "input[test-tag='tag-629']"
+}    
+    ADDITIONAL_FIELD623={
+    LocatorTypes.LOCATOR: "input[test-tag='tag-623']"
 }    
 
     START_DATE_TEXT27 = {
@@ -862,6 +872,12 @@ class Locators:
 }    
     ACCOUNT_GROUP_TEXT77 = {
     LocatorTypes.LOCATOR: "input[test-tag='tag-77']"
+    }
+    IDENTIFIER  = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-77']"
+    }
+    TAGS_INPUT_1511  = {
+    LocatorTypes.LOCATOR: "input[test-tag='tag-1511']"
     }
 
 
